@@ -1,33 +1,24 @@
+import { ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const Header = () => {
   return (
-    <header className="bg-white border-b border-border">
-      <div className="container mx-auto px-4 py-6">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-xl">📊</span>
-            </div>
-            <h1 className="text-2xl font-bold text-foreground">
-              HEALTHCARE ANALYSIS HQ
-            </h1>
+    <header className="border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
+      <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+        {/* Logo */}
+        <div className="flex items-center space-x-2">
+          <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+            <ArrowUpRight className="w-5 h-5 text-white" />
           </div>
-
-          {/* Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            <a href="#" className="text-foreground hover:text-primary transition-colors font-medium">
-              Technology
-            </a>
-            <a href="#" className="text-foreground hover:text-primary transition-colors font-medium">
-              About Us
-            </a>
-            <Button variant="ghost" className="text-primary hover:text-primary font-medium">
-              Login
-            </Button>
-          </nav>
+          <span className="text-xl font-bold text-foreground">
+            HEALTHCARE ANALYSIS HQ (HAQ)
+          </span>
         </div>
+
+        {/* Login Button */}
+        <Button variant="outline" className="border-border hover:bg-muted">
+          Login
+        </Button>
       </div>
     </header>
   );
