@@ -10,7 +10,7 @@ const Index = () => {
         <div className="grid lg:grid-cols-3 gap-6 h-full max-h-[calc(100vh-80px)]">
           
           {/* Left Column - Main Content (2/3 width) */}
-          <div className="lg:col-span-2 space-y-4 overflow-y-auto">
+          <div className="lg:col-span-2 space-y-4">
             {/* Hero Section */}
             <div className="space-y-3">
               <h1 className="text-3xl lg:text-4xl font-bold text-foreground leading-tight">
@@ -101,37 +101,6 @@ const Index = () => {
                   <button className="bg-primary hover:bg-primary/90 text-white px-3 py-1 rounded mt-2 text-xs">
                     SUBMIT
                   </button>
-                </div>
-
-                {/* Features - Compact */}
-                <div className="grid grid-cols-3 gap-2 text-xs">
-                  <div className="flex flex-col items-center gap-1">
-                    <div className="w-6 h-6 bg-blue-100 rounded flex items-center justify-center">
-                      <span className="text-xs">📊</span>
-                    </div>
-                    <div className="text-center">
-                      <div className="font-medium text-foreground">Real Data</div>
-                      <div className="text-muted-foreground">Healthcare datasets</div>
-                    </div>
-                  </div>
-                  <div className="flex flex-col items-center gap-1">
-                    <div className="w-6 h-6 bg-purple-100 rounded flex items-center justify-center">
-                      <span className="text-xs">⚡</span>
-                    </div>
-                    <div className="text-center">
-                      <div className="font-medium text-foreground">Instant</div>
-                      <div className="text-muted-foreground">Feedback</div>
-                    </div>
-                  </div>
-                  <div className="flex flex-col items-center gap-1">
-                    <div className="w-6 h-6 bg-green-100 rounded flex items-center justify-center">
-                      <span className="text-xs">📈</span>
-                    </div>
-                    <div className="text-center">
-                      <div className="font-medium text-foreground">Progress</div>
-                      <div className="text-muted-foreground">Tracking</div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
