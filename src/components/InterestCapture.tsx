@@ -44,30 +44,25 @@ export const InterestCapture = () => {
   };
 
   return (
-    <div className="bg-card rounded-lg border border-border p-8 shadow-sm w-full max-w-md">
-      <div className="text-center mb-6">
-        <h3 className="text-xl font-semibold text-foreground mb-2">Show Your Interest</h3>
-        <p className="text-muted-foreground text-sm">
-          Be the first to know when we launch our healthcare data analysis platform
-        </p>
-      </div>
+    <div className="bg-card border border-border rounded-lg p-4 shadow-sm w-full">
+      <h3 className="text-lg font-semibold text-center mb-4">Show Interest</h3>
       
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-3">
         <div className="relative">
-          <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-5 h-5" />
+          <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
           <Input
             type="email"
-            placeholder="Enter your email address"
+            placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="pl-10 h-12 border-border focus:border-primary focus:ring-primary"
+            className="pl-10 h-10 border-border focus:border-primary focus:ring-primary"
             disabled={isSubmitting}
           />
         </div>
         
         <Button 
           type="submit"
-          className="w-full h-12 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
+          className="w-full h-10 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
           disabled={isSubmitting}
         >
           {isSubmitting ? (
@@ -77,16 +72,16 @@ export const InterestCapture = () => {
             </span>
           ) : (
             <span className="flex items-center gap-2">
-              Show Interest
+              Get Started
               <ArrowRight className="w-4 h-4" />
             </span>
           )}
         </Button>
       </form>
       
-      <div className="mt-4 text-center">
+      <div className="mt-3 text-center">
         <p className="text-xs text-muted-foreground">
-          We respect your privacy. No spam, unsubscribe anytime.
+          We respect your privacy. No spam, ever.
         </p>
       </div>
     </div>
