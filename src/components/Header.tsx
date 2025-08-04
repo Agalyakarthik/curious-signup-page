@@ -7,11 +7,11 @@ export const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-primary rounded flex items-center justify-center">
-              <span className="text-white font-bold text-lg">↗</span>
+            <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+              <span className="text-white font-bold text-xl">📊</span>
             </div>
-            <h1 className="text-xl font-bold text-foreground">
-              HEALTHCARE ANALYSIS HQ (HAQ)
+            <h1 className="text-2xl font-bold text-foreground">
+              HEALTHCARE ANALYSIS HQ
             </h1>
           </div>
 
@@ -23,7 +23,7 @@ export const Header = () => {
             <a href="#" className="text-foreground hover:text-primary transition-colors font-medium">
               About Us
             </a>
-            <Button variant="outline" className="text-primary border-primary hover:bg-primary hover:text-white font-medium">
+            <Button variant="ghost" className="text-primary hover:text-primary font-medium">
               Login
             </Button>
           </nav>
