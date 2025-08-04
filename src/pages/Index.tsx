@@ -20,9 +20,8 @@ const Index = () => {
               <div className="space-y-4 text-xl text-muted-foreground leading-relaxed">
                 <p>
                   Being a healthcare analyst comes down to mastering{" "}
-                  <span className="font-semibold text-foreground">SQL</span>,{" "}
-                  <span className="font-semibold text-foreground">Python</span>, and{" "}
-                  <span className="font-semibold text-foreground">Statistics</span>.
+                  <span className="font-semibold text-foreground">SQL</span> and{" "}
+                  <span className="font-semibold text-foreground">Python</span>.
                 </p>
                 <p>
                   Start your journey to mastery with us today.
@@ -30,19 +29,33 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Trust indicators */}
-            <div className="flex flex-wrap gap-6 pt-4">
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 bg-primary rounded-full"></div>
-                <span className="text-sm font-medium text-muted-foreground">Real Healthcare Data</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 bg-primary rounded-full"></div>
-                <span className="text-sm font-medium text-muted-foreground">Expert-Designed Curriculum</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 bg-primary rounded-full"></div>
-                <span className="text-sm font-medium text-muted-foreground">Career-Focused Learning</span>
+            {/* Why Healthcare Analysis HQ */}
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-foreground">
+                Why Healthcare Analysis HQ?
+              </h3>
+              
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="w-5 h-5 text-primary font-bold text-lg flex-shrink-0 mt-0.5">✓</div>
+                  <span className="text-lg text-muted-foreground">Specialized focus on healthcare data analysis challenges</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-5 h-5 text-primary font-bold text-lg flex-shrink-0 mt-0.5">✓</div>
+                  <span className="text-lg text-muted-foreground">Interactive SQL and Python learning environment</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-5 h-5 text-primary font-bold text-lg flex-shrink-0 mt-0.5">✓</div>
+                  <span className="text-lg text-muted-foreground">Daily practice routine to build consistent skills</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-5 h-5 text-primary font-bold text-lg flex-shrink-0 mt-0.5">✓</div>
+                  <span className="text-lg text-muted-foreground">Real-world healthcare datasets and scenarios</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-5 h-5 text-primary font-bold text-lg flex-shrink-0 mt-0.5">✓</div>
+                  <span className="text-lg text-muted-foreground">Progress tracking and gamification features</span>
+                </div>
               </div>
             </div>
           </div>
