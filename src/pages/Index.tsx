@@ -5,6 +5,7 @@ const Index = () => {
   const [showChallenge, setShowChallenge] = useState(false);
   const [userSolution, setUserSolution] = useState("");
   const [showSolution, setShowSolution] = useState(false);
+  const [hasSubmitted, setHasSubmitted] = useState(false);
 
   return (
     <div className="min-h-screen bg-background">
@@ -127,7 +128,12 @@ const Index = () => {
               technologies that power healthcare analysis!
             </p>
             <button 
-              onClick={() => setShowChallenge(!showChallenge)}
+              onClick={() => {
+                setShowChallenge(!showChallenge);
+                setHasSubmitted(false);
+                setShowSolution(false);
+                setUserSolution("");
+              }}
               className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors"
             >
               ➡️ {showChallenge ? 'Hide Challenge' : 'Start Daily SQL Challenge'}
@@ -190,8 +196,17 @@ const Index = () => {
                 
                 <div className="flex gap-4 mt-4">
                   <button 
+                    onClick={() => setHasSubmitted(true)}
+                    disabled={!userSolution.trim()}
+                    className="bg-primary hover:bg-primary/90 disabled:bg-muted disabled:text-muted-foreground text-white px-6 py-2 rounded-lg font-semibold transition-colors"
+                  >
+                    Submit Solution
+                  </button>
+                  
+                  <button 
                     onClick={() => setShowSolution(!showSolution)}
-                    className="bg-secondary hover:bg-secondary/90 text-secondary-foreground px-6 py-2 rounded-lg font-semibold transition-colors"
+                    disabled={!hasSubmitted}
+                    className="bg-secondary hover:bg-secondary/90 disabled:bg-muted disabled:text-muted-foreground text-secondary-foreground px-6 py-2 rounded-lg font-semibold transition-colors"
                   >
                     {showSolution ? 'Hide Solution' : 'Show Solution'}
                   </button>
