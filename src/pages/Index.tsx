@@ -3,6 +3,8 @@ import { useState } from "react";
 
 const Index = () => {
   const [showChallenge, setShowChallenge] = useState(false);
+  const [userSolution, setUserSolution] = useState("");
+  const [showSolution, setShowSolution] = useState(false);
 
   return (
     <div className="min-h-screen bg-background">
@@ -174,6 +176,59 @@ const Index = () => {
                 <p className="text-sm text-muted-foreground mt-3">
                   The dataset includes patient admissions, department information, admission/discharge dates, and other relevant healthcare metrics.
                 </p>
+              </div>
+
+              {/* Solution Input Section */}
+              <div className="bg-card border border-border rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-foreground mb-4">Your SQL Solution:</h3>
+                <textarea
+                  value={userSolution}
+                  onChange={(e) => setUserSolution(e.target.value)}
+                  placeholder="Type your SQL query here..."
+                  className="w-full h-32 p-3 border border-border rounded-lg bg-background text-foreground resize-none font-mono text-sm"
+                />
+                
+                <div className="flex gap-4 mt-4">
+                  <button 
+                    onClick={() => setShowSolution(!showSolution)}
+                    className="bg-secondary hover:bg-secondary/90 text-secondary-foreground px-6 py-2 rounded-lg font-semibold transition-colors"
+                  >
+                    {showSolution ? 'Hide Solution' : 'Show Solution'}
+                  </button>
+                </div>
+
+                {/* Correct Solution Display */}
+                {showSolution && (
+                  <div className="mt-6 bg-muted/50 border border-muted rounded-lg p-4">
+                    <h4 className="font-semibold text-foreground mb-3">Correct Solution:</h4>
+                    <div className="bg-background border border-border rounded p-3 font-mono text-sm">
+                      <pre className="text-foreground whitespace-pre-wrap">
+{`SELECT 
+    d.department_name,
+    ROUND(AVG(DATEDIFF(a.discharge_date, a.admission_date)), 2) AS avg_length_of_stay,
+    COUNT(*) AS total_admissions
+FROM 
+    admissions a
+    JOIN departments d ON a.department_id = d.department_id
+WHERE 
+    YEAR(a.admission_date) = 2023
+GROUP BY 
+    d.department_name
+ORDER BY 
+    avg_length_of_stay DESC
+LIMIT 5;`}
+                      </pre>
+                    </div>
+                    
+                    <div className="mt-4 p-4 bg-primary/10 border border-primary/20 rounded-lg">
+                      <p className="text-primary font-semibold mb-2">🎉 Verify Your Solution!</p>
+                      <p className="text-muted-foreground">
+                        Compare your query with the correct solution above. Practice makes perfect! 
+                        We'll meet you tomorrow with a brand new challenge to continue your SQL journey.
+                      </p>
+                    </div>
+                  </div>
+                )}
               </div>
             </section>
           )}
