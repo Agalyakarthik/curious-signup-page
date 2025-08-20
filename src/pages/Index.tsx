@@ -56,20 +56,13 @@ const Index = () => {
               </div>
               
               <div className="bg-card border border-border rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-foreground mb-3">📈 Progress Tracking & Gamification</h3>
-                <p className="text-muted-foreground">
-                  Monitor your daily streak and stay motivated as you build momentum.
-                </p>
-              </div>
-              
-              <div className="bg-card border border-border rounded-lg p-6">
                 <h3 className="text-xl font-semibold text-foreground mb-3">💻 Interactive Learning</h3>
                 <p className="text-muted-foreground">
                   Apply your knowledge directly with our in-browser SQL editor.
                 </p>
               </div>
               
-              <div className="bg-card border border-border rounded-lg p-6 md:col-span-2">
+              <div className="bg-card border border-border rounded-lg p-6">
                 <h3 className="text-xl font-semibold text-foreground mb-3">🏥 Real Datasets</h3>
                 <p className="text-muted-foreground">
                   Work with data that mirrors the complexities and opportunities within healthcare analytics.
