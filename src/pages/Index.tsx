@@ -1,6 +1,9 @@
 import { Header } from "@/components/Header";
+import { useState } from "react";
 
 const Index = () => {
+  const [showChallenge, setShowChallenge] = useState(false);
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -121,13 +124,59 @@ const Index = () => {
               Start your learning journey today and join the Healthcare Analysis HQ community in mastering the 
               technologies that power healthcare analysis!
             </p>
-            <button className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors">
-              ➡️ Start Daily SQL Challenge
+            <button 
+              onClick={() => setShowChallenge(!showChallenge)}
+              className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors"
+            >
+              ➡️ {showChallenge ? 'Hide Challenge' : 'Start Daily SQL Challenge'}
             </button>
             <p className="text-muted-foreground mt-4">
               Let's learn, grow, and analyze together! Happy querying! 🎉
             </p>
           </section>
+
+          {/* Daily Challenge Section */}
+          {showChallenge && (
+            <section className="mt-8 bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-lg p-8">
+              <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
+                Today's SQL Challenge 📊
+              </h2>
+              
+              <div className="bg-card border border-border rounded-lg p-6 mb-6">
+                <h3 className="text-xl font-semibold text-foreground mb-4">Challenge Question:</h3>
+                <p className="text-lg text-muted-foreground mb-4">
+                  Using the hospital admissions dataset, write a SQL query to find the top 5 departments with the highest average length of stay (in days) for patients admitted in 2023. Include the department name, average length of stay (rounded to 2 decimal places), and total number of admissions.
+                </p>
+                
+                <div className="bg-muted/50 border border-muted rounded p-4 mb-4">
+                  <h4 className="font-semibold text-foreground mb-2">Expected Output Columns:</h4>
+                  <ul className="text-muted-foreground space-y-1">
+                    <li>• department_name</li>
+                    <li>• avg_length_of_stay</li>
+                    <li>• total_admissions</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="bg-card border border-border rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-foreground mb-4">Dataset Download:</h3>
+                <p className="text-muted-foreground mb-4">
+                  Download the hospital admissions dataset to practice this challenge:
+                </p>
+                <a 
+                  href="https://drive.google.com/file/d/1ABC123DEF456/view?usp=sharing" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                >
+                  📁 Download Dataset from Google Drive
+                </a>
+                <p className="text-sm text-muted-foreground mt-3">
+                  The dataset includes patient admissions, department information, admission/discharge dates, and other relevant healthcare metrics.
+                </p>
+              </div>
+            </section>
+          )}
 
         </article>
       </main>
