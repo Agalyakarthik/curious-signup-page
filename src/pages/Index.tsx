@@ -13,82 +13,86 @@ const Index = () => {
       <main className="container mx-auto px-4 py-8 max-w-4xl">
         <article className="prose prose-lg max-w-none">
           
-          {/* Blog Header */}
-          <header className="text-center mb-12">
-            <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
-              Level Up Your Healthcare Analytics Skills with Our Daily SQL Challenge!
+          {/* Academic Header */}
+          <header className="text-center mb-16 max-w-4xl mx-auto">
+            <h1 className="text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight tracking-tight">
+              Master Healthcare Analytics with Daily SQL Challenges
             </h1>
-            <p className="text-xl text-muted-foreground">
-              Ready to sharpen your SQL skills while diving into the fascinating world of healthcare data?
+            <p className="text-xl lg:text-2xl text-muted-foreground font-light leading-relaxed">
+              Join Harvard-quality training to sharpen your SQL skills with real-world healthcare datasets
             </p>
+            <div className="w-24 h-1 bg-gradient-primary mx-auto mt-8 rounded-full"></div>
           </header>
 
-          {/* Introduction */}
-          <div className="mb-8">
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Healthcare Analysis HQ (HAQ) is thrilled to introduce our brand-new Daily SQL Code Challenge! 🎉
+          {/* Academic Introduction */}
+          <div className="mb-12 bg-gradient-card border border-accent/20 rounded-lg p-8 shadow-card">
+            <p className="text-xl text-foreground leading-relaxed font-medium mb-6">
+              Healthcare Analysis HQ presents our premier Daily SQL Challenge program—designed with the rigor and excellence of top-tier academic institutions.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed mt-4">
-              We believe that consistent practice is key to mastering any skill, especially when it comes to data analysis. 
-              That's why we've designed engaging, bite-sized SQL queries focused on real-world healthcare datasets. 
-              Each day, you'll face a new challenge designed to test and expand your abilities.
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              We believe that mastery comes through deliberate, consistent practice. Our carefully crafted SQL challenges focus on real-world healthcare datasets, providing you with the analytical skills demanded by today's data-driven healthcare industry. Each challenge is designed to progressively build your expertise.
             </p>
           </div>
 
           {/* Why Participate Section */}
-          <section className="mb-8">
-            <h2 className="text-3xl font-bold text-foreground mb-6">Why Participate? 🤔</h2>
+          <section className="mb-12">
+            <h2 className="text-4xl font-bold text-foreground mb-8 text-center">Why Choose Our Program?</h2>
             
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-card border border-border rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-foreground mb-3">📊 Healthcare Data Focus</h3>
-                <p className="text-muted-foreground">
-                  Learn to extract meaningful insights from data relevant to the healthcare industry.
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-gradient-card border border-accent/20 rounded-lg p-8 shadow-card hover:shadow-elegant transition-all duration-300">
+                <div className="w-12 h-12 bg-primary rounded-lg mb-4 flex items-center justify-center">
+                  <span className="text-primary-foreground font-bold text-xl">📊</span>
+                </div>
+                <h3 className="text-2xl font-bold text-foreground mb-4">Healthcare Data Expertise</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Master the art of extracting meaningful insights from complex healthcare datasets used in real clinical and administrative environments.
                 </p>
               </div>
               
-              <div className="bg-card border border-border rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-foreground mb-3">📅 Daily Practice Routine</h3>
-                <p className="text-muted-foreground">
-                  Make learning a habit with quick, focused challenges you can tackle every day.
+              <div className="bg-gradient-card border border-accent/20 rounded-lg p-8 shadow-card hover:shadow-elegant transition-all duration-300">
+                <div className="w-12 h-12 bg-primary rounded-lg mb-4 flex items-center justify-center">
+                  <span className="text-primary-foreground font-bold text-xl">📅</span>
+                </div>
+                <h3 className="text-2xl font-bold text-foreground mb-4">Structured Learning Path</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Build expertise through our methodically designed daily challenges that progressively advance your analytical capabilities.
                 </p>
               </div>
               
-              <div className="bg-card border border-border rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-foreground mb-3">📈 Progress Tracking & Gamification</h3>
-                <p className="text-muted-foreground">
-                  Monitor your daily streak and stay motivated as you build momentum.
+              <div className="bg-gradient-card border border-accent/20 rounded-lg p-8 shadow-card hover:shadow-elegant transition-all duration-300">
+                <div className="w-12 h-12 bg-primary rounded-lg mb-4 flex items-center justify-center">
+                  <span className="text-primary-foreground font-bold text-xl">📈</span>
+                </div>
+                <h3 className="text-2xl font-bold text-foreground mb-4">Performance Analytics</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Track your progress with detailed metrics and maintain your learning momentum through our streak system.
                 </p>
               </div>
               
-              <div className="bg-card border border-border rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-foreground mb-3">💻 Interactive Learning</h3>
-                <p className="text-muted-foreground">
-                  Apply your knowledge directly with our in-browser SQL editor.
-                </p>
-              </div>
-              
-              <div className="bg-card border border-border rounded-lg p-6 md:col-span-2">
-                <h3 className="text-xl font-semibold text-foreground mb-3">🏥 Real Datasets</h3>
-                <p className="text-muted-foreground">
-                  Work with data that mirrors the complexities and opportunities within healthcare analytics.
+              <div className="bg-gradient-card border border-accent/20 rounded-lg p-8 shadow-card hover:shadow-elegant transition-all duration-300">
+                <div className="w-12 h-12 bg-primary rounded-lg mb-4 flex items-center justify-center">
+                  <span className="text-primary-foreground font-bold text-xl">💻</span>
+                </div>
+                <h3 className="text-2xl font-bold text-foreground mb-4">Interactive Platform</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Practice directly in our advanced SQL environment designed specifically for healthcare data analysis.
                 </p>
               </div>
             </div>
           </section>
 
-          {/* Daily Streak Section */}
-          <section className="mb-8">
-            <h2 className="text-3xl font-bold text-foreground mb-6">The Power of the Daily Streak 💪</h2>
-            <div className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-lg p-6">
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                We all know that feeling of accomplishment when you maintain a streak! Our Daily SQL Challenge leverages 
-                this to keep you motivated. Each day you successfully solve the query, your streak grows. Watch your 
-                consistency build and celebrate your commitment to learning.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed mt-4">
-                A longer streak means more practice, deeper understanding, and greater confidence in your SQL abilities.
-              </p>
+          {/* Excellence Through Consistency */}
+          <section className="mb-12">
+            <h2 className="text-4xl font-bold text-foreground mb-8 text-center">Excellence Through Consistency</h2>
+            <div className="bg-gradient-primary text-primary-foreground rounded-lg p-10 shadow-glow">
+              <div className="max-w-3xl mx-auto text-center">
+                <p className="text-xl leading-relaxed mb-6 font-light">
+                  Academic excellence is built through disciplined, consistent practice. Our streak system harnesses the psychology of achievement, transforming daily learning into a powerful habit that compounds over time.
+                </p>
+                <p className="text-lg leading-relaxed opacity-90">
+                  Each completed challenge strengthens not only your technical expertise but also your analytical confidence—the foundation of exceptional healthcare data professionals.
+                </p>
+              </div>
             </div>
           </section>
 
@@ -117,23 +121,22 @@ const Index = () => {
             </div>
           </section>
 
-          {/* Call to Action */}
-          <section className="text-center bg-card border border-border rounded-lg p-8">
-            <h2 className="text-2xl font-bold text-foreground mb-4">
-              Ready to take your healthcare analytics skills to the next level?
+          {/* Academic Call to Action */}
+          <section className="text-center bg-gradient-card border border-accent/20 rounded-lg p-12 shadow-card">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6 leading-tight">
+              Begin Your Journey to Healthcare Analytics Mastery
             </h2>
-            <p className="text-lg text-muted-foreground mb-6">
-              Start your learning journey today and join the Healthcare Analysis HQ community in mastering the 
-              technologies that power healthcare analysis!
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+              Join our community of dedicated professionals who are advancing their careers through rigorous, practical training in healthcare data analysis.
             </p>
             <button 
               onClick={() => setShowChallenge(!showChallenge)}
-              className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors"
+              className="bg-primary hover:bg-primary-glow text-primary-foreground px-10 py-4 rounded-lg font-bold text-xl transition-all duration-300 shadow-elegant hover:shadow-glow transform hover:scale-105"
             >
-              ➡️ {showChallenge ? 'Hide Challenge' : 'Start Daily SQL Challenge'}
+              {showChallenge ? 'Hide Challenge' : 'Access Daily Challenge'}
             </button>
-            <p className="text-muted-foreground mt-4">
-              Let's learn, grow, and analyze together! Happy querying! 🎉
+            <p className="text-muted-foreground mt-6 font-light">
+              Excellence in healthcare analytics begins with your first query.
             </p>
           </section>
 

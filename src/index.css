@@ -8,36 +8,52 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
+    /* Harvard-Inspired Academic Color Palette */
+    --background: 0 0% 100%; /* Clean white */
+    --foreground: 0 0% 8%; /* Deep black for maximum readability */
 
-    --card: 0 0% 98%;
-    --card-foreground: 0 0% 15%;
+    --card: 350 85% 98%; /* Light crimson tint */
+    --card-foreground: 0 0% 8%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 15%;
+    --popover-foreground: 0 0% 8%;
 
-    /* Harvard Color Palette */
+    /* Harvard Crimson Primary */
     --primary: 350 85% 35%; /* Harvard Crimson #A41034 */
     --primary-foreground: 0 0% 100%;
+    --primary-glow: 350 85% 45%; /* Lighter crimson for effects */
 
-    --secondary: 350 85% 94%;
+    /* Academic Secondary Colors */
+    --secondary: 350 85% 95%; /* Very light crimson */
     --secondary-foreground: 350 85% 35%;
 
-    --accent: 350 85% 35%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 350 45% 88%; /* Muted crimson accent */
+    --accent-foreground: 350 85% 35%;
 
-    --muted: 0 0% 96%;
+    --muted: 0 0% 97%; /* Almost white */
     --muted-foreground: 0 0% 45%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 94%;
+    --border: 350 20% 88%; /* Subtle crimson border */
+    --input: 0 0% 96%;
     --ring: 350 85% 35%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem; /* Slightly more rounded for academic feel */
+
+    /* Harvard-inspired gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(350, 85%, 35%), hsl(350, 85%, 45%));
+    --gradient-hero: linear-gradient(135deg, hsl(350, 85%, 35%) 0%, hsl(350, 75%, 40%) 100%);
+    --gradient-card: linear-gradient(145deg, rgba(164, 16, 52, 0.03), rgba(164, 16, 52, 0.01));
+    
+    /* Academic shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(350 85% 35% / 0.15);
+    --shadow-card: 0 4px 12px -2px hsl(350 85% 35% / 0.08);
+    --shadow-glow: 0 0 20px hsl(350 85% 45% / 0.2);
+
+    /* Smooth academic transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
 
     --sidebar-background: 0 0% 98%;
