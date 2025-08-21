@@ -11,26 +11,26 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <main className="container mx-auto px-6 py-12 max-w-4xl">
-        <article className="max-w-none">
+      <main className="container mx-auto px-6 py-12 max-w-5xl">
+        <div className="text-center space-y-16">
           
           {/* Blog Header */}
-          <header className="text-center mb-16">
+          <header>
             <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
               Master Healthcare SQL
               <span className="block text-primary mt-2">Daily Challenges</span>
             </h1>
-            <p className="text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
               Ready to sharpen your SQL skills while diving into the fascinating world of healthcare data?
             </p>
           </header>
 
           {/* Introduction */}
-          <div className="mb-16 max-w-4xl mx-auto px-4">
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8 text-center">
+          <div className="max-w-4xl mx-auto space-y-8">
+            <p className="text-lg text-muted-foreground leading-relaxed">
               Healthcare Analysis HQ (HAQ) is thrilled to introduce our brand-new Daily SQL Code Challenge!
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed text-center">
+            <p className="text-lg text-muted-foreground leading-relaxed">
               Daily practice with real-world healthcare datasets. Each challenge is designed to test and expand your SQL abilities.
             </p>
           </div>
@@ -206,7 +206,7 @@ LIMIT 5;`}
             </section>
           )}
 
-        </article>
+        </div>
       </main>
     </div>
   );
