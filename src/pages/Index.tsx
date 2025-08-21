@@ -17,7 +17,8 @@ const Index = () => {
           {/* Blog Header */}
           <header className="text-center mb-12">
             <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
-              Level Up Your Healthcare Analytics Skills with Our Daily SQL Challenge!
+              Master Healthcare SQL
+              <span className="block text-primary">Daily Challenges</span>
             </h1>
             <p className="text-xl text-muted-foreground">
               Ready to sharpen your SQL skills while diving into the fascinating world of healthcare data?
