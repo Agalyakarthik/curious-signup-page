@@ -31,9 +31,7 @@ const Index = () => {
               Healthcare Analysis HQ (HAQ) is thrilled to introduce our brand-new Daily SQL Code Challenge!
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed text-center">
-              We believe that consistent practice is key to mastering any skill, especially when it comes to data analysis. 
-              That's why we've designed engaging, bite-sized SQL queries focused on real-world healthcare datasets. 
-              Each day, you'll face a new challenge designed to test and expand your abilities.
+              Daily practice with real-world healthcare datasets. Each challenge is designed to test and expand your SQL abilities.
             </p>
           </div>
 
