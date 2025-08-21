@@ -36,40 +36,6 @@ const Index = () => {
             </p>
           </div>
 
-          {/* Why Participate Section */}
-          <section className="mb-8">
-            <h2 className="text-3xl font-bold text-foreground mb-6">Why Participate? 🤔</h2>
-            
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-card border border-border rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-foreground mb-3">📊 Healthcare Data Focus</h3>
-                <p className="text-muted-foreground">
-                  Learn to extract meaningful insights from data relevant to the healthcare industry.
-                </p>
-              </div>
-              
-              <div className="bg-card border border-border rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-foreground mb-3">📅 Daily Practice Routine</h3>
-                <p className="text-muted-foreground">
-                  Make learning a habit with quick, focused challenges you can tackle every day.
-                </p>
-              </div>
-              
-              <div className="bg-card border border-border rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-foreground mb-3">💻 Interactive Learning</h3>
-                <p className="text-muted-foreground">
-                  Apply your knowledge directly with our in-browser SQL editor.
-                </p>
-              </div>
-              
-              <div className="bg-card border border-border rounded-lg p-6">
-                <h3 className="text-xl font-semibold text-foreground mb-3">🏥 Real Datasets</h3>
-                <p className="text-muted-foreground">
-                  Work with data that mirrors the complexities and opportunities within healthcare analytics.
-                </p>
-              </div>
-            </div>
-          </section>
 
           {/* Daily Streak Section */}
           <section className="mb-8">
