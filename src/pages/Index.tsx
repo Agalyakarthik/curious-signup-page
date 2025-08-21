@@ -26,11 +26,11 @@ const Index = () => {
           </header>
 
           {/* Introduction */}
-          <div className="mb-16 text-center max-w-3xl mx-auto">
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+          <div className="mb-16 text-center max-w-4xl mx-auto px-4">
+            <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-3xl mx-auto">
               Healthcare Analysis HQ (HAQ) is thrilled to introduce our brand-new Daily SQL Code Challenge!
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
               We believe that consistent practice is key to mastering any skill, especially when it comes to data analysis. 
               That's why we've designed engaging, bite-sized SQL queries focused on real-world healthcare datasets. 
               Each day, you'll face a new challenge designed to test and expand your abilities.
