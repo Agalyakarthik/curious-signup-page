@@ -11,26 +11,26 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <main className="container mx-auto px-4 py-8 max-w-4xl">
-        <article className="prose prose-lg max-w-none">
+      <main className="container mx-auto px-6 py-12 max-w-4xl">
+        <article className="max-w-none">
           
           {/* Blog Header */}
-          <header className="text-center mb-12">
-            <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
+          <header className="text-center mb-16">
+            <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
               Master Healthcare SQL
-              <span className="block text-primary">Daily Challenges</span>
+              <span className="block text-primary mt-2">Daily Challenges</span>
             </h1>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Ready to sharpen your SQL skills while diving into the fascinating world of healthcare data?
             </p>
           </header>
 
           {/* Introduction */}
-          <div className="mb-8">
-            <p className="text-lg text-muted-foreground leading-relaxed">
+          <div className="mb-16 text-center max-w-3xl mx-auto">
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
               Healthcare Analysis HQ (HAQ) is thrilled to introduce our brand-new Daily SQL Code Challenge! 🎉
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed mt-4">
+            <p className="text-lg text-muted-foreground leading-relaxed">
               We believe that consistent practice is key to mastering any skill, especially when it comes to data analysis. 
               That's why we've designed engaging, bite-sized SQL queries focused on real-world healthcare datasets. 
               Each day, you'll face a new challenge designed to test and expand your abilities.
@@ -39,25 +39,25 @@ const Index = () => {
 
 
           {/* Daily Streak Section */}
-          <section className="mb-8">
-            <h2 className="text-3xl font-bold text-foreground mb-6">The Power of the Daily Streak 💪</h2>
-            <div className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-lg p-6">
-              <p className="text-lg text-muted-foreground leading-relaxed">
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-foreground mb-8 text-center">The Power of the Daily Streak 💪</h2>
+            <div className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-lg p-8 max-w-4xl mx-auto">
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6 text-center">
                 We all know that feeling of accomplishment when you maintain a streak! Our Daily SQL Challenge leverages 
                 this to keep you motivated. Each day you successfully solve the query, your streak grows. Watch your 
                 consistency build and celebrate your commitment to learning.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed mt-4">
+              <p className="text-lg text-muted-foreground leading-relaxed text-center">
                 A longer streak means more practice, deeper understanding, and greater confidence in your SQL abilities.
               </p>
             </div>
           </section>
 
           {/* How It Works Section */}
-          <section className="mb-8">
-            <h2 className="text-3xl font-bold text-foreground mb-6">How It Works 🧑‍💻</h2>
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-foreground mb-8 text-center">How It Works 🧑‍💻</h2>
             
-            <div className="space-y-4">
+            <div className="space-y-6 max-w-3xl mx-auto">
               {[
                 { step: "1", title: "Visit the Daily Challenge", desc: "Navigate to the dedicated section on Healthcare Analysis HQ." },
                 { step: "2", title: "Understand the Question", desc: "Carefully read the challenge based on a healthcare dataset." },
@@ -65,13 +65,13 @@ const Index = () => {
                 { step: "4", title: "Submit and See Results", desc: "Instantly check if your query is correct." },
                 { step: "5", title: "Build Your Streak", desc: "Come back daily to tackle new challenges and grow your streak!" }
               ].map((item) => (
-                <div key={item.step} className="flex items-start gap-4 p-4 border border-border rounded-lg">
-                  <div className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
+                <div key={item.step} className="flex items-start gap-6 p-6 border border-border rounded-lg bg-card/50">
+                  <div className="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">
                     {item.step}
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-1">{item.title}</h3>
-                    <p className="text-muted-foreground">{item.desc}</p>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-foreground mb-2 text-lg">{item.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -79,11 +79,11 @@ const Index = () => {
           </section>
 
           {/* Call to Action */}
-          <section className="text-center bg-card border border-border rounded-lg p-8">
-            <h2 className="text-2xl font-bold text-foreground mb-4">
+          <section className="text-center bg-card border border-border rounded-lg p-12 mb-16">
+            <h2 className="text-3xl font-bold text-foreground mb-6">
               Ready to take your healthcare analytics skills to the next level?
             </h2>
-            <p className="text-lg text-muted-foreground mb-6">
+            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
               Start your learning journey today and join the Healthcare Analysis HQ community in mastering the 
               technologies that power healthcare analysis!
             </p>
@@ -94,11 +94,11 @@ const Index = () => {
                 setShowSolution(false);
                 setUserSolution("");
               }}
-              className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors"
+              className="bg-primary hover:bg-primary/90 text-white px-10 py-4 rounded-lg font-semibold text-lg transition-colors"
             >
               ➡️ {showChallenge ? 'Hide Challenge' : 'Start Daily SQL Challenge'}
             </button>
-            <p className="text-muted-foreground mt-4">
+            <p className="text-muted-foreground mt-6 text-lg">
               Let's learn, grow, and analyze together! Happy querying! 🎉
             </p>
           </section>
