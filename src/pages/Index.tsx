@@ -39,7 +39,7 @@ const Index = () => {
           {/* Daily Streak Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-foreground mb-8 text-center">The Power of the Daily Streak 💪</h2>
-            <div className="bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-lg p-8 max-w-4xl mx-auto">
+            <div className="p-8 max-w-4xl mx-auto">
               <p className="text-lg text-muted-foreground leading-relaxed mb-6 text-center">
                 We all know that feeling of accomplishment when you maintain a streak! Our Daily SQL Challenge leverages 
                 this to keep you motivated. Each day you successfully solve the query, your streak grows. Watch your 
