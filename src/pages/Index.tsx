@@ -28,7 +28,7 @@ const Index = () => {
           {/* Introduction */}
           <div className="mb-16 text-center max-w-3xl mx-auto">
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Healthcare Analysis HQ (HAQ) is thrilled to introduce our brand-new Daily SQL Code Challenge! 🎉
+              Healthcare Analysis HQ (HAQ) is thrilled to introduce our brand-new Daily SQL Code Challenge!
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
               We believe that consistent practice is key to mastering any skill, especially when it comes to data analysis. 
@@ -99,7 +99,7 @@ const Index = () => {
               ➡️ {showChallenge ? 'Hide Challenge' : 'Start Daily SQL Challenge'}
             </button>
             <p className="text-muted-foreground mt-6 text-lg">
-              Let's learn, grow, and analyze together! Happy querying! 🎉
+              Let's learn, grow, and analyze together! Happy querying!
             </p>
           </section>
 
@@ -196,7 +196,7 @@ LIMIT 5;`}
                     </div>
                     
                     <div className="mt-4 p-4 bg-primary/10 border border-primary/20 rounded-lg">
-                      <p className="text-primary font-semibold mb-2">🎉 Verify Your Solution!</p>
+                      <p className="text-primary font-semibold mb-2">Verify Your Solution!</p>
                       <p className="text-muted-foreground">
                         Compare your query with the correct solution above. Practice makes perfect! 
                         We'll meet you tomorrow with a brand new challenge to continue your SQL journey.
