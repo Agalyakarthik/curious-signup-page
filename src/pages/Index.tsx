@@ -1,11 +1,88 @@
 import { Header } from "@/components/Header";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Index = () => {
   const [showChallenge, setShowChallenge] = useState(false);
+  const [challenge, setChallenge] = useState(null);
+  const [responseId, setResponseId] = useState(null);
   const [userSolution, setUserSolution] = useState("");
   const [showSolution, setShowSolution] = useState(false);
   const [hasSubmitted, setHasSubmitted] = useState(false);
+//   useEffect(() => {
+//     if (showChallenge && !challenge) {
+//       console.log("Inside challenge");
+//      fetch("https://mite-kind-neatly.ngrok-free.app/webhook-test/getQuest", {
+//   method: "GET",
+//   headers: {
+//     "Content-Type": "application/json",
+//   },
+// })
+//   .then((res) => {
+//     if (!res.ok) {
+//       throw new Error(`Server returned ${res.status}`);
+//     }
+//     return res.json();
+//   })
+//   .then((data) => {
+//     console.log("Fetched data:", data);
+//     setChallenge(data);
+//   })
+//   .catch((err) => console.error("Error fetching challenge:", err));
+
+//     }
+//   }, [showChallenge]);
+const submitSolution = async () => { console.log("challenge is "+showChallenge+ "responseId "+responseId);
+  try {
+    const response = await fetch("https://mite-kind-neatly.ngrok-free.app/webhook/submitSolution", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ solution:userSolution, responseId:responseId }),
+    });
+
+    console.log("INSIDE solu FUNC");
+    if (!response.ok) throw new Error("Failed to fetch");
+
+    const data = await response.json(); // simpler than text + parse
+    console.log("Fetched challenge:", data);
+
+    setHasSubmitted(true);
+    console.log(challenge);
+  } catch (error) {
+    console.error("Error fetching challenge:", error);
+  }
+};
+
+const fetchChallenge = async () => { console.log("challenge is "+showChallenge);
+  if(showChallenge == false) {
+  try {
+    const response = await fetch("https://mite-kind-neatly.ngrok-free.app/webhook/getQuest", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email:"nirthi3108@gmail.com" }),
+    });
+
+    console.log("INSIDE FUNC");
+    if (!response.ok) throw new Error("Failed to fetch");
+
+    const data = await response.json(); // simpler than text + parse
+    console.log("Fetched challenge:", data);
+
+    setChallenge(data);
+    setShowChallenge(!showChallenge);
+    setHasSubmitted(false);
+    setShowSolution(false);
+    setUserSolution("");
+    setResponseId(data.responseId);
+
+    console.log(data);
+  } catch (error) {
+    console.error("Error fetching challenge:", error);
+  }
+} else {
+  setShowChallenge(!showChallenge);
+  setResponseId(null);
+}
+};
 
   return (
     <div className="min-h-screen bg-background">
@@ -86,12 +163,14 @@ const Index = () => {
               technologies that power healthcare analysis!
             </p>
             <button 
-              onClick={() => {
+              onClick={fetchChallenge}
+              /*  {() => {
                 setShowChallenge(!showChallenge);
                 setHasSubmitted(false);
                 setShowSolution(false);
                 setUserSolution("");
-              }}
+                
+              }}*/
               className="bg-primary hover:bg-primary/90 text-white px-10 py-4 rounded-lg font-semibold text-lg transition-colors"
             >
               ➡️ {showChallenge ? 'Hide Challenge' : 'Start Daily SQL Challenge'}
@@ -102,7 +181,7 @@ const Index = () => {
           </section>
 
           {/* Daily Challenge Section */}
-          {showChallenge && (
+          {showChallenge && challenge && (
             <section className="mt-8 bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-lg p-8">
               <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
                 Today's SQL Challenge 📊
@@ -111,17 +190,18 @@ const Index = () => {
               <div className="bg-card border border-border rounded-lg p-6 mb-6">
                 <h3 className="text-xl font-semibold text-foreground mb-4">Challenge Question:</h3>
                 <p className="text-lg text-muted-foreground mb-4">
-                  Using the hospital admissions dataset, write a SQL query to find the top 5 departments with the highest average length of stay (in days) for patients admitted in 2023. Include the department name, average length of stay (rounded to 2 decimal places), and total number of admissions.
+                  
+                  {challenge.question}
                 </p>
                 
-                <div className="bg-muted/50 border border-muted rounded p-4 mb-4">
+                {/* <div className="bg-muted/50 border border-muted rounded p-4 mb-4">
                   <h4 className="font-semibold text-foreground mb-2">Expected Output Columns:</h4>
                   <ul className="text-muted-foreground space-y-1">
                     <li>• department_name</li>
                     <li>• avg_length_of_stay</li>
                     <li>• total_admissions</li>
                   </ul>
-                </div>
+                </div> */}
               </div>
 
               <div className="bg-card border border-border rounded-lg p-6">
@@ -154,7 +234,8 @@ const Index = () => {
                 
                 <div className="flex gap-4 mt-4">
                   <button 
-                    onClick={() => setHasSubmitted(true)}
+                    onClick={submitSolution}
+                    // {() => setHasSubmitted(true)}
                     disabled={!userSolution.trim()}
                     className="bg-primary hover:bg-primary/90 disabled:bg-muted disabled:text-muted-foreground text-white px-6 py-2 rounded-lg font-semibold transition-colors"
                   >
@@ -176,20 +257,7 @@ const Index = () => {
                     <h4 className="font-semibold text-foreground mb-3">Correct Solution:</h4>
                     <div className="bg-background border border-border rounded p-3 font-mono text-sm">
                       <pre className="text-foreground whitespace-pre-wrap">
-{`SELECT 
-    d.department_name,
-    ROUND(AVG(DATEDIFF(a.discharge_date, a.admission_date)), 2) AS avg_length_of_stay,
-    COUNT(*) AS total_admissions
-FROM 
-    admissions a
-    JOIN departments d ON a.department_id = d.department_id
-WHERE 
-    YEAR(a.admission_date) = 2023
-GROUP BY 
-    d.department_name
-ORDER BY 
-    avg_length_of_stay DESC
-LIMIT 5;`}
+{challenge.answer}
                       </pre>
                     </div>
                     
